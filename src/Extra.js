@@ -50,3 +50,17 @@ Add Product, My Cart,
 FEATURED CATEGORIES
 
 Get your desired product from featured category
+
+
+<div className="card bg-base-200 h-96 ">
+                    <figure className="px-10 pt-5">
+                        <LiaShippingFastSolid className='w-52 h-24'></LiaShippingFastSolid>
+                    </figure>
+                    <div className="card-body items-center text-center">
+                        <h2 className=" text-2xl font-semibold">Free Shipping</h2>
+                        <p className="font-normal text-sm">Our shipping services offer fast, reliable delivery worldwide. From parcels to products, we ensure safe and timely transport for your needs</p>
+                        <div className="card-actions">
+                            <button className="px-4 py-2 rounded-full bg-indigo-600 text-white font-medium">Learn More</button>
+                        </div>
+                    </div>
+                </div>
