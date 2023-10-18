@@ -1,13 +1,15 @@
 
 import { NavLink } from 'react-router-dom';
+import { GrTechnology } from 'react-icons/gr';
 
 const NavBar = () => {
     return (
         <div>
-             <div className=" navbar bg-red-400 my-5 ">
+             <div className=" navbar my-5 ">
 
                 <div className="flex-1">
-                    <h2 className=' font-medium text-lg'>Tech </h2>
+                    <GrTechnology></GrTechnology>
+                    <h2 className=' font-bold text-lg'> Tech <span className='text-indigo-600'>Snap</span> </h2>  
                 </div>
 
                <div className='mr-8'>
@@ -15,7 +17,7 @@ const NavBar = () => {
                     <li>
 
                         <NavLink to="/" className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-green-400" : ""
+                            isPending ? "pending" : isActive ? "text-indigo-600" : ""
                         }>
                             Home </NavLink>
 
@@ -23,7 +25,7 @@ const NavBar = () => {
                     <li>
 
                         <NavLink to="/addProduct" className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-green-400" : ""
+                            isPending ? "pending" : isActive ? "text-indigo-600" : ""
                         }>
                             Add Product </NavLink>
 
@@ -31,15 +33,11 @@ const NavBar = () => {
                     <li>
 
                         <NavLink to="/myCart" className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-green-400" : ""
+                            isPending ? "pending" : isActive ? "text-indigo-600" : ""
                         }>
                             My Cart </NavLink>
 
                     </li>
-
-
-
-
 
 
                 </ul>

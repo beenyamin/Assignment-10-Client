@@ -46,4 +46,7 @@ Add Product, My Cart,
 
 </div>
 
-https://ibb.co/p2XHnCx
+
+FEATURED CATEGORIES
+
+Get your desired product from featured category
