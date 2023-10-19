@@ -10,7 +10,7 @@ const SixBrandCard = () => {
 
     
     
-       <div className='text-center px-0 lg:px-20 ml-10 lg:ml-0 justify-center mt-28 lg:mt-0'>
+       <div className='text-center px-5 lg:px-20 ml-10 lg:ml-0 justify-center mt-28 lg:mt-0'>
 
         <h2 className='font-bold text-3xl'> Our Brand</h2>
         <p className='font-normal text-lg'>Get your desired product from Our Brand</p>

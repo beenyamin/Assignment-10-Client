@@ -16,6 +16,7 @@ import Oppo from './Components/AllPhones/Oppo';
 import Symphony from './Components/AllPhones/Symphony';
 import Sony from './Components/AllPhones/Sony';
 import Vivo from './Components/AllPhones/Vivo';
+import PrivateRoute from './Components/Routes/PrivateRoute';
 
 
 
@@ -34,12 +35,12 @@ const router = createBrowserRouter([
     },
     {
       path:"/addProduct",
-      element:<AddProduct></AddProduct>
+      element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
     },
 
     {
       path:'/myCart',
-      element:<MyCart></MyCart>
+      element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
     },
 
     {

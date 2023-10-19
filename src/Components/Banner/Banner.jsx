@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div className='h-96 mt-16 mb-10 text-center lg:flex justify-between'  >
+        <div className='h-96 px-0  lg:px-20 mt-16 mb-10 text-center lg:flex justify-between'  >
 
             <div>
                 <h2 className=" lg:text-4xl  font-bold">Connecting You to <br /> Tech Snap Marvels</h2>
