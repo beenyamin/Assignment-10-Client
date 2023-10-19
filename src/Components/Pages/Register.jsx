@@ -7,7 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
 
-    const { createUser , googleLogin} = useContext(AuthContext);
+    const { createUser , googleLogin, handleUpdateProfile} = useContext(AuthContext);
 
     const [registerError, setRegisterError] = useState('');
     const [signUpSuccess, setSignUpSuccess] = useState('');
@@ -40,16 +40,41 @@ const Register = () => {
             return
         }
 
+
+
         createUser(email, password)
-            .then(result => {
-                console.log(result.user);
-                toast.success(' Registration SuccessFully => Please Log in !')
-                navigate (location?.state ? location.state : '/login' );
-            })
-            .catch(error => {
-                console.error(error);
-                toast.error('Registration Failed. Please check your Info');
-            })
+        .then(res => {
+            console.log(res)   
+            handleUpdateProfile(name, image)    
+
+        .then(res => {   
+            console.log(res)  
+            navigate(location?.state ? location.state : '/login' ); 
+            toast.success(' Registration SuccessFully => Please Log in !')
+          
+            
+        })
+    })
+
+        .catch(error => {
+                toast.error(error.message);
+
+        })
+
+
+
+
+
+        // createUser(email, password)
+        //     .then(result => {
+        //         console.log(result.user);
+        //         toast.success(' Registration SuccessFully => Please Log in !')
+        //         navigate (location?.state ? location.state : '/login' );
+        //     })
+        //     .catch(error => {
+        //         console.error(error);
+        //         toast.error('Registration Failed. Please check your Info');
+        //     })
 
 
     }
@@ -98,9 +123,9 @@ const Register = () => {
 
                     <div className="form-control ">
                         <label className="label">
-                            <span className="label-text font-semibold ">Image</span>
+                            <span className="label-text font-semibold ">Photo</span>
                         </label>
-                        <input type="text" name='image' placeholder="Image URL" className="input input-bordered" />
+                        <input type="text" name='image' placeholder="Photo URL" className="input input-bordered" />
                     </div>
 
 

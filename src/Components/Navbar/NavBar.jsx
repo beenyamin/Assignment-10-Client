@@ -61,16 +61,17 @@ const NavBar = () => {
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
            
                     <div className="w-10 rounded-full">
-                        {/* <img src={user.photoURL} alt={user.displayName} /> */}
-                        <img src='/public/pexels-photo-91224.webp' alt="Your Name" /> 
+                        <img src={user.photoURL} alt={user.displayName} />
+                    
                     </div>
                          <span>{user.email}</span>
                     
                 </label>
                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     <li>
-                        {/* <button className="btn btn-sm  btn-ghost">{user.displayName}</button> */}
-                        <button className="btn btn-sm  btn-ghost">displayName</button>
+                        <button className="btn btn-sm  btn-ghost">{user.displayName}</button>
+
+              
 
                     </li>
                     <li>

@@ -3,7 +3,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
 
-
 const Login = () => {
 
     const {SignInUser,googleLogin} = useContext (AuthContext);
@@ -26,8 +25,6 @@ const Login = () => {
         setLoginError('');
         setLoginSuccess('');
 
-
-
         if (password.length < 6) {
             toast.error('Password should be at least 6 characters!')
             return;
@@ -37,7 +34,6 @@ const Login = () => {
             toast.error(" Your password should have  at Least one Capital letter! ")
             return
         }
-
 
 
         SignInUser(email, password)
