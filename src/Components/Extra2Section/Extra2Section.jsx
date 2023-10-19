@@ -12,11 +12,9 @@ import {  GiDeliveryDrone} from 'react-icons/gi';
 
 const Extra2Section = () => {
     return (
-        <div className='text-center justify-center mt-28 lg:mt-0'>
+        <div className='text-center justify-center mt-28 lg:mt-24'>
             <h2 className='font-bold text-3xl'>FEATURED CATEGORIES</h2>
             <p className='font-normal text-lg'>Get your desired product from featured category</p>
-
-
 
 
       <div className="grid lg:grid-cols-4 grid-cols-1 mt-5 pl-14 lg:pl-0 space-y-5 ">

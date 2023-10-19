@@ -10,6 +10,12 @@ import MyCart from './Components/Pages/MyCart';
 import Login from './Components/Pages/Login';
 import Register from './Components/Pages/Register';
 import AuthProvider from './Components/Provider/AuthProvider';
+import Apple from './Components/AllPhones/Apple';
+import Samsung from './Components/AllPhones/Samsung';
+import Oppo from './Components/AllPhones/Oppo';
+import Symphony from './Components/AllPhones/Symphony';
+import Sony from './Components/AllPhones/Sony';
+import Vivo from './Components/AllPhones/Vivo';
 
 
 
@@ -23,6 +29,7 @@ const router = createBrowserRouter([
     {
     path:"/home",
     element:<Home></Home>
+  
 
     },
     {
@@ -48,8 +55,39 @@ const router = createBrowserRouter([
       path:"/register",
       element:<Register></Register>
 
+    },
+    {
+      path:"/apple",
+      element:<Apple></Apple>
+
+    },
+    {
+      path:"/samsung",
+      element:<Samsung></Samsung>
+
+    },
+    {
+      path:"/oppo",
+      element:<Oppo></Oppo>
+
+    },
+    {
+      path:"/symphony",
+      element:<Symphony></Symphony>
+
+    },
+    {
+      path:"/sony",
+      element:<Sony></Sony>
+
+    },
+    {
+      path:"/vivo",
+      element:<Vivo></Vivo>
 
     }
+
+
 
 
 

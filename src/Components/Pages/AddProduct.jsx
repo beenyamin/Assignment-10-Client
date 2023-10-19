@@ -26,10 +26,11 @@ const AddProduct = () => {
 
         <h2 className="text-3xl text-center justify-center mb-3 font-extrabold ">Add Product</h2>
 
+      
         <form onSubmit={handleAddProduct}>
              {/* form row  name &  quantity */}
 
-            <div className="flex gap-5" >
+            <div className=" flex gap-5" >
                 <div className="form-control w-6/12 lg:w-1/2 ">
                     <label className="label">
                         <span className="label-text">Image</span>
@@ -51,10 +52,11 @@ const AddProduct = () => {
                         <input type="text" name="name" placeholder="Name" className="input input-bordered w-full" />
                     </label>
                 </div>
-
-         
-
             </div>
+
+
+
+
              {/* form row supplier & test */}
             <div className="flex gap-5" >
 
@@ -138,4 +140,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default AddProduct; 
