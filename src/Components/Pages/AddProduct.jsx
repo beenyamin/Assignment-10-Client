@@ -19,21 +19,21 @@ const AddProduct = () => {
 
         //send to db 
 
-        fetch ('http://localhost:5000/product',{
+        fetch('http://localhost:5000/product', {
 
-        method:'POST',
-        headers: {
+            method: 'POST',
+            headers: {
 
-            'content-type': 'application/json'
-        },
+                'content-type': 'application/json'
+            },
 
-        body:JSON.stringify(addProduct)
+            body: JSON.stringify(addProduct)
 
         })
-        .then (res => res.json ())
-        .then (data => {
-            console.log(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
 
 
     }
@@ -110,7 +110,7 @@ const AddProduct = () => {
                 </div>
 
                 <input type="submit" value="Add Product"
-                        className="btn bg-indigo-600 text-white btn-block mt-4" />
+                    className="btn bg-indigo-600 text-white btn-block mt-4" />
 
 
 

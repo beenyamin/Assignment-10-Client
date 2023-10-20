@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Menus = () => {
-    const links = ['home', 'addProduct', 'myCart'];
+    const links = ['home', 'addProduct', 'myCart','product'];
     return (
         <>
             {
@@ -38,9 +38,7 @@ const NavBar = () => {
                     <Link to='/home' className="font-bold normal-case text-3xl">
 
                         <div className="flex">
-
                             <GrTechnology className='w-10'></GrTechnology>
-
                             <h2 className='ml-2 font-bold text-2xl'> Tech <span className='text-indigo-600'>Snap</span> </h2>
 
                         </div>

@@ -17,6 +17,8 @@ import Symphony from './Components/AllPhones/Symphony';
 import Sony from './Components/AllPhones/Sony';
 import Vivo from './Components/AllPhones/Vivo';
 import PrivateRoute from './Components/Routes/PrivateRoute';
+import ProductDetails from './Components/Pages/ProductDetails';
+import Update from './Components/Pages/Update';
 
 
 
@@ -45,6 +47,24 @@ const router = createBrowserRouter([
 
     {
 
+      path:'/product',
+      element: <PrivateRoute> <ProductDetails></ProductDetails></PrivateRoute>
+
+
+    },
+
+    {
+
+      path:'/update',
+      element: <Update></Update>
+
+
+    },
+
+
+
+    {
+
       path:"/login",
       element:<Login></Login>
 
@@ -59,9 +79,11 @@ const router = createBrowserRouter([
     },
     {
       path:"/apple",
-      element:<Apple></Apple>
+      element:<Apple></Apple>,
+      loader:() => fetch ('http://localhost:5000/product')
 
     },
+
     {
       path:"/samsung",
       element:<Samsung></Samsung>
@@ -69,7 +91,8 @@ const router = createBrowserRouter([
     },
     {
       path:"/oppo",
-      element:<Oppo></Oppo>
+      element:<Oppo></Oppo>,
+      loader:() => fetch ('http://localhost:5000/product')
 
     },
     {
