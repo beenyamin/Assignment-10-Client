@@ -1,11 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import AppleCard from "./AppleCard";
+import { useState } from "react";
 
 
 
 const Apple = () => {
 
-    const products = useLoaderData();
+    const loadedProducts = useLoaderData();
+    const [products, setProducts] = useState(loadedProducts)
 
     return (
 
@@ -38,11 +40,11 @@ const Apple = () => {
 
 
   {/* map */}
-  
+
             <div className="grid grid-cols-1 lg:grid-cols-2  mt-10">
                 {
 
-                    products.map(product => <AppleCard key={product._id} product={product}  > </AppleCard>)
+                    products.map(product => <AppleCard key={product._id} product={product} setProducts={setProducts} products={products} > </AppleCard>)
 
                 }
 

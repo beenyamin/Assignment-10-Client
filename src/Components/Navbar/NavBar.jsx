@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Menus = () => {
-    const links = ['home', 'addProduct', 'myCart','product'];
+    const links = ['home', 'addProduct', 'myCart',];
     return (
         <>
             {
