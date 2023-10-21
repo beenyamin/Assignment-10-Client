@@ -1,39 +1,49 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import {  useLoaderData } from "react-router-dom";
+import SonyCard from "./SonyCard";
 
 
 const Sony = () => {
 
-    // {product}
-    // const { name, image, brandName, Type, price, description, rating } = product;
+    const loadedProducts = useLoaderData();
+    const [products, setProducts] = useState(loadedProducts)
 
     return (
         
         <div>
-
-            <h2 className="text-3xl mt-6 font-bold text-center
-             justify-center"> <span className="text-indigo-600">Brand</span> Sony</h2>
-
-            <div className="card w-10/12 ml-6 lg:ml-0 mt-10 lg:card-side bg-base-100 shadow-xl">
-                <figure><img src="" className="w-64 h-48" alt="Album" /></figure>
-
-                <div className="card-body mr-10 pr-5">
-
-                    <h2 className="card-title">{name}</h2>
-                    <p> <span className="text-lg font-medium">Model : </span> </p>
-                    {/* {Type} */}
-                    <p><span className="text-lg font-medium">Price: </span></p>
-                    {/* {price} */}
-
-                    <div className="card-actions justify-end">
-
-                        <Link to={'/product'}><button className="btn-sm bg-indigo-600 text-white rounded-lg mr-3 ">Details</button></Link>
-                        <Link to={'/update'}> <button className="btn-sm bg-indigo-600 text-white rounded-lg mr-3">Update</button> </Link>
-
-
+            
+            <div className="px-8 my-4">
+                <div className="carousel max-h-96 w-full">
+                    <div id="item1" className="carousel-item  w-full">
+                        <img src="/vivo slider.jpg" className="w-full rounded-md " />
+                    </div>  
+                    <div id="item2" className="carousel-item w-full">
+                        <img src="/iphone-15 slider.jpg" className="w-full rounded-md" />
                     </div>
+                    <div id="item3" className="carousel-item w-full">
+                        <img src="/oppo slider.png" className="w-full rounded-md" />
+                    </div>
+                   
+                </div>
+
+                <div className="flex justify-center w-full py-2 gap-2">
+                    <a href="#item1" className="btn btn-xs">1</a>
+                    <a href="#item2" className="btn btn-xs">2</a>
+                    <a href="#item3" className="btn btn-xs">3</a>
+                  
                 </div>
             </div>
 
+            <div className="grid grid-cols-1 lg:grid-cols-2  mt-10">
+                {
+
+                    products.map(product => <SonyCard key={product._id} product={product}
+                        setProducts={setProducts} products={products}></SonyCard> )
+
+                }
+
+            </div>
+           
 
         </div>
     );

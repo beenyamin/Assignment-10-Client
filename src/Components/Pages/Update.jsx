@@ -127,7 +127,7 @@ const Update = () => {
 
     </div>
 
-    <input type="submit" value="Submit"
+    <input type="submit" value="Update Product"
         className="btn bg-indigo-600 pl-5 pr-5 text-white btn-block mt-4" />
 
 
