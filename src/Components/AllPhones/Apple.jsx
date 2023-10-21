@@ -44,7 +44,8 @@ const Apple = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2  mt-10">
                 {
 
-                    products.map(product => <AppleCard key={product._id} product={product} setProducts={setProducts} products={products} > </AppleCard>)
+                    products.map(product => <AppleCard key={product._id} product={product}
+                         setProducts={setProducts} products={products} > </AppleCard>)
 
                 }
 

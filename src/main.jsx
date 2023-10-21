@@ -42,14 +42,18 @@ const router = createBrowserRouter([
 
     {
       path:'/myCart',
-      element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
+      element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
+      loader:() => fetch ('https://assignment10-server-side-three.vercel.app/addCard')
+
     },
+
+    
 
     {
 
       path:'/product/:id',
       element:  <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-      loader:({params}) => fetch (`http://localhost:5000/product/${params.id}`)
+      loader:({params}) => fetch (`https://assignment10-server-side-three.vercel.app/product/${params.id}`)
 
     },
 
@@ -58,18 +62,15 @@ const router = createBrowserRouter([
 
       path:'/update/:id',
       element: <Update></Update>,
-      loader:({params}) => fetch (`http://localhost:5000/product/${params.id}`)
+      loader:({params}) => fetch (`https://assignment10-server-side-three.vercel.app/product/${params.id}`)
 
 
     },
-
-
 
     {
 
       path:"/login",
       element:<Login></Login>
-
 
     },
 
@@ -82,27 +83,27 @@ const router = createBrowserRouter([
     {
       path:"/apple",
       element:<Apple></Apple>,
-      loader:() => fetch ('http://localhost:5000/product')
+      loader:() => fetch ('https://assignment10-server-side-three.vercel.app/product')
 
     },
 
     {
       path:"/samsung",
       element:<Samsung></Samsung>,
-      loader:() => fetch ('http://localhost:5000/product')
+      loader:() => fetch ('https://assignment10-server-side-three.vercel.app/product')
 
 
     },
     {
       path:"/oppo",
       element:<Oppo></Oppo>,
-      loader:() => fetch ('http://localhost:5000/product')
+      loader:() => fetch ('https://assignment10-server-side-three.vercel.app/product')
 
     },
     {
       path:"/symphony",
       element:<Symphony></Symphony>,
-      loader:() => fetch ('http://localhost:5000/product')
+      loader:() => fetch ('https://assignment10-server-side-three.vercel.app/product')
       
 
 
@@ -110,13 +111,13 @@ const router = createBrowserRouter([
     {
       path:"/sony",
       element:<Sony></Sony>,
-      loader:() => fetch ('http://localhost:5000/product')
+      loader:() => fetch ('https://assignment10-server-side-three.vercel.app/product')
 
     },
     {
       path:"/vivo",
       element:<Vivo></Vivo>,
-      loader:() => fetch ('http://localhost:5000/product')
+      loader:() => fetch ('https://assignment10-server-side-three.vercel.app/product')
 
     }
 

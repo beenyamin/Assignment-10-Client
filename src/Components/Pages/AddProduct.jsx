@@ -19,7 +19,7 @@ const AddProduct = () => {
 
         //send to db 
 
-        fetch('http://localhost:5000/product', {
+        fetch('https://assignment10-server-side-three.vercel.app/product', {
 
             method: 'POST',
             headers: {

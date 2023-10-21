@@ -62,18 +62,18 @@ const NavBar = () => {
                         <img src={user.photoURL} alt={user.displayName} />
                     
                     </div>
-                         <span>{user.email}</span>
+                         <span>{user.displayName}</span>
                     
                 </label>
-                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-2 z-[1] p-2 shadow bg-base-200 rounded-box w-60">
                     <li>
-                        <button className="btn btn-sm  btn-ghost">{user.displayName}</button>
+                        <button className="btn btn-sm  btn-primary">{user.email}</button>
 
               
 
                     </li>
                     <li>
-                        <button className="btn btn-sm border-spacing-1  btn-ghost"
+                        <button className="btn btn-sm border-spacing-1 mt-3  btn-primary"
                             onClick={logOut}
                         >Logout</button>
 
