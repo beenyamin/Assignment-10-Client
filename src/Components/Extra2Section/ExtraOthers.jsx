@@ -11,7 +11,7 @@ const ExtraOthers = () => {
 
             <div className='text-center justify-center mt-28 lg:mt-32 '>
                 <h2 className='font-bold text-3xl'>Best In Town</h2>
-                <p className='font-normal text-lg'>Get your desired product from featured category</p>
+                <p className='font-normal text-lg'>Exceptional quality, unmatched value, and <br /> superior customer service distinguish us</p>
             </div>
 
 
