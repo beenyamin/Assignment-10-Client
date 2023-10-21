@@ -1,4 +1,4 @@
-import toast, { Toaster } from "react-hot-toast";
+import  { Toaster } from "react-hot-toast";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 

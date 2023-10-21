@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { GrTechnology } from 'react-icons/gr';
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Menus = () => {
     const links = ['home', 'addProduct', 'myCart',];
@@ -21,6 +22,15 @@ const NavBar = () => {
     // const { user, logOut } = useAuth();
 
     const { user, logOut } = useContext(AuthContext);
+
+const logOutBtn = ()=>{
+    logOut()
+    .then(() => {
+        toast.success('Successfully Logout')
+    }).catch((error) => {
+        toast.error(error)
+    });
+}
 
 
     return (
@@ -74,7 +84,7 @@ const NavBar = () => {
                     </li>
                     <li>
                         <button className="btn btn-sm border-spacing-1 mt-3  btn-primary"
-                            onClick={logOut}
+                            onClick={logOutBtn}
                         >Logout</button>
 
                     </li>

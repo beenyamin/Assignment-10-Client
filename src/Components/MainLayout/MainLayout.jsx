@@ -2,6 +2,7 @@
 import { Outlet } from 'react-router-dom';
 import NavBar from '../Navbar/NavBar';
 import Footer from '../Footer/Footer';
+import { Toaster } from 'react-hot-toast';
 
 
 const MainLayout = () => {
@@ -14,6 +15,8 @@ const MainLayout = () => {
            </div>
 
            <Footer></Footer>
+           <Toaster></Toaster>
+            
           
             
         </div>
