@@ -1,27 +1,21 @@
-// import { Link } from "react-router-dom";
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
-const AppleCard = ({ product, products, setProducts }) => {
-
+const OppoCard = ( { product, products, setProducts }) => {
 
     const {_id, name, image, brandName, Type, price, description, rating } = product;
 
 
     useEffect(() => {
-        const productFilter = products.filter(product => product.brandName == 'iphone')
+        const productFilter = products.filter(product => product.brandName == 'oppo')
         setProducts(productFilter)
     }, [])
 
     return (
+        <div>
 
-
-        <div className="">
-
-
-            <div className="card w-10/12 ml-6 lg:ml-0 mt-10 lg:card-side bg-base-100 shadow-xl">
+<div className="card w-10/12 ml-6 lg:ml-0 mt-10 lg:card-side bg-base-100 shadow-xl">
                 <figure><img src={image} className="w-64 h-48" alt="Album" /></figure>
 
                 <div className="card-body mr-10 pr-5">
@@ -40,11 +34,9 @@ const AppleCard = ({ product, products, setProducts }) => {
             </div>
 
 
-
-
-
+            
         </div>
     );
 };
 
-export default AppleCard;
+export default OppoCard;

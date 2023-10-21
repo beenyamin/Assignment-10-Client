@@ -12,7 +12,7 @@ const Apple = () => {
     return (
 
         <div>
-            {/* <h2>Apple Page: {products.length}</h2> */}
+     
 
             <div className="px-8 my-4">
                 <div className="carousel max-h-96 w-full">

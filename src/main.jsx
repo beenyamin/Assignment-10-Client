@@ -56,8 +56,9 @@ const router = createBrowserRouter([
 
     {
 
-      path:'/update',
-      element: <Update></Update>
+      path:'/update/:id',
+      element: <Update></Update>,
+      loader:({params}) => fetch (`http://localhost:5000/product/${params.id}`)
 
 
     },
@@ -87,7 +88,9 @@ const router = createBrowserRouter([
 
     {
       path:"/samsung",
-      element:<Samsung></Samsung>
+      element:<Samsung></Samsung>,
+      loader:() => fetch ('http://localhost:5000/product')
+
 
     },
     {
@@ -98,17 +101,22 @@ const router = createBrowserRouter([
     },
     {
       path:"/symphony",
-      element:<Symphony></Symphony>
+      element:<Symphony></Symphony>,
+      loader:() => fetch ('http://localhost:5000/product')
+      
+
 
     },
     {
       path:"/sony",
-      element:<Sony></Sony>
+      element:<Sony></Sony>,
+      loader:() => fetch ('http://localhost:5000/product')
 
     },
     {
       path:"/vivo",
-      element:<Vivo></Vivo>
+      element:<Vivo></Vivo>,
+      loader:() => fetch ('http://localhost:5000/product')
 
     }
 
